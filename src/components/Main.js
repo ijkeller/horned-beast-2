@@ -1,23 +1,21 @@
 import React from 'react';
-import HornedBeast from './HornedBeast'
+import HornedBeast from './HornedBeast';
+import BeastsArray from '../data.json';
 
 function Main() {
 
-
     return (
         <div className='main'>
-            <HornedBeast
-                title='Horned Beast 1'
-                imageUrl='https://via.placeholder.com/300x150'
-                description='cute horned beast' />
-            <HornedBeast
-                title='Horned Beast 2'
-                imageUrl='https://via.placeholder.com/450x200'
-                description='cute horned beast' />
-            <HornedBeast
-                title='Horned Beast 3'
-                imageUrl='https://via.placeholder.com/325'
-                description='cute horned beast' />
+            {
+                BeastsArray.map(beast => {
+                    return <HornedBeast
+                        key={beast._id}
+                        title={beast.title}
+                        image={beast.image_url}
+                        description={beast.description}
+                    />
+                })
+            }
         </div>
     )
 }
