@@ -29,12 +29,12 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 3:45 pm
 
-Finish time: _____
+Finish time: 4:35 pm
 
-Actual time needed to complete: _____
+Actual time needed to complete: 50 min
 
 
-Number and name of feature: Feature 3, 
+Number and name of feature: Feature 3, Bootstrap
 
 Estimate of time needed to complete: _____
 
