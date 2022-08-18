@@ -32,7 +32,7 @@ class HornedBeast extends Component {
         return (
             <>
                 <Card style={{ width: '18rem', height: '30rem' }}>
-                    <Card.Img variant="top" onClick={this.props.handleOpen} src={this.props.beast.image_url} />
+                    <Card.Img variant="top" onClick={() => this.props.handleOpen(this.props.beast)} src={this.props.beast.image_url} />
                     <Card.Body>
                         <Card.Title>{this.props.beast.title}</Card.Title>
                         <Card.Text>
