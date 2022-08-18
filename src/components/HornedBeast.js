@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LikesButton from './LikesButton';
 import Card from 'react-bootstrap/Card';
+import './HornedBeasts.css'
 
 class HornedBeast extends Component {
 
@@ -30,10 +31,10 @@ class HornedBeast extends Component {
     render() {
         return (
             <>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={this.props.image} />
+                <Card style={{ width: '18rem', height: '30rem' }}>
+                    <Card.Img variant="top" onClick={this.props.handleOpen} src={this.props.beast.image_url} />
                     <Card.Body>
-                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Title>{this.props.beast.title}</Card.Title>
                         <Card.Text>
                             {this.props.description}
                         </Card.Text>
