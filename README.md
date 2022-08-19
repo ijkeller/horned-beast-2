@@ -44,12 +44,24 @@ Finish time: 5:30 pm
 
 Actual time needed to complete: 45 min
 
+
 Number and name of feature: Feature 4, Display a Modal
 
 Estimate of time needed to complete: 2 hrs
 
 Start time: : 4:30pm
 
-Finish time: _____
+Finish time: 4:20pm next day
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3-4 hour estimate
+
+
+Number and name of feature: Feature 5, Filter by Horns
+
+Estimate of time needed to complete: 1 hrs
+
+Start time: : 4:45pm
+
+Finish time: 
+
+Actual time needed to complete: 

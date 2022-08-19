@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './components/Header'
-import Main from './components/Main'
-import Footer from './components/Footer'
-import BeastsArray from './data.json';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
+import OriginalBeastsArray from './data.json';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import './App.css';
@@ -14,7 +14,8 @@ class App extends React.Component {
 
     this.state = {
       showBeast: false,
-      currentBeast: {}
+      currentBeast: {},
+      BeastsArray: OriginalBeastsArray
     }
   }
 
@@ -52,8 +53,8 @@ render() {
       </Modal>
 
       <Header />
-
-      <Main BeastsArray={BeastsArray} handleOpen={this.handleOpen} />
+      
+      <Main BeastsArray={this.state.BeastsArray} handleOpen={this.handleOpen} />
 
       <Footer />
     </div>

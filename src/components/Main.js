@@ -1,26 +1,36 @@
 import React from 'react';
 import HornedBeast from './HornedBeast';
+import HBForm from './HBForm';
 import './Main.css'
 
 
 class Main extends React.Component {
+    constructor(props){
+        super(props);
 
-    
-    // {
-    //     "_id": 1,
-    //     "image_url": "http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg",
-    //     "title": "UniWhal",
-    //     "description": "A unicorn and a narwhal nuzzling their horns",
-    //     "keyword": "narwhal",
-    //     "horns": 1
-    //   }
+        this.state = {
+            BeastsArray: this.props.BeastsArray
+        }
+    }
 
+    handleChange = (event) => {
+        let filter = event.target.value.toLowerCase()
+        let filteredHorns = this.props.BeastsArray.horns.filter( b => b.includes(filter) )
+        let filteredListOfBeasts = this.props.BeastsArray.title.filter( b => b.includes(filter) )
+        this.setState({ BeastsArray: filteredHorns})
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+
+    }
 
     render() {
         return (
             <div className='main'>
+                <HBForm changeHandler={this.handleChange} submitHandler={this.handleSubmit} />
                 {
-                    this.props.BeastsArray.map(beast => {
+                    this.state.BeastsArray.map(beast => {
                         return <HornedBeast
                             key={beast._id}
                             beast={beast}
