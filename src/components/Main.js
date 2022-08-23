@@ -34,7 +34,7 @@ class Main extends React.Component {
                         return <HornedBeast
                             key={beast._id}
                             beast={beast}
-                            handleOpen={() => this.props.handleOpen(beast)}
+                            handleOpen={this.props.handleOpen}
                         />
                     })
                 }
