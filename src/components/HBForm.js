@@ -6,25 +6,25 @@ class HBForm extends React.Component {
 
 
     render() {
-    return (
-        <>
-            <form onSubmit={this.props.submitHandler}>
-                <Form.Select onChange={this.props.changeHandler}>
-                    <option>Number of Horns</option>
-                    <option value='1' >One Horn</option>
-                    <option value='2' >Two Horns</option>
-                    <option value='3' >Three Horns</option>
-                </Form.Select>
-
-                <Form.Group>
-                    <Form.Label>Search</Form.Label>
-                    <Form.Control type="text" onChange={this.props.changeHandler} />
-                </Form.Group>
-
-                <Button variant="secondary" type="submit">Submit</Button>
-            </form>
-        </>
-    )}
+        return (
+            <>
+                <Form onSubmit={this.props.submitHandler}>
+                        <Form.Group >
+                            <Form.Select id='horns-select' onChange={this.props.handleHornsChange}>
+                                <option value="" >Number of Horns</option>
+                                <option value={1} >One</option>
+                                <option value={2} >Two</option>
+                                <option value={3} >Three</option>
+                                <option value={100} >One Hundred</option>
+                            </Form.Select>
+                            <Form.Control type="text" id='search' onChange={this.props.changeHandler} placeholder="Search" />
+                        </Form.Group>
+                        <Button variant="secondary" type="submit">Submit</Button>
+                        <Button variant="secondary" onClick={this.props.handleReset} >Reset</Button>
+                </Form>
+            </>
+        )
+    }
 }
 
 export default HBForm;
