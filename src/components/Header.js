@@ -1,13 +1,16 @@
 import React from 'react';
+import HBForm from './HBForm';
 
-function Header() {
+class Header extends React.Component {
 
-
-    return (
-        <div className='header'>
-            <h1>Horned Beasts</h1>
-        </div>
-    )
+    render() {
+        return (
+            <div className='header'>
+                <h1>Horned Beasts</h1>
+                <HBForm changeHandler={this.props.handleChange} submitHandler={this.props.handleSubmit} handleHornsChange={this.props.handleHornsChange} handleReset={this.props.handleReset} />
+            </div>
+        )
+    }
 }
 
 export default Header;
