@@ -32,7 +32,7 @@ handleClose = () => {
 
 handleHornsChange = (event) => {
   let hornsNum = event.target.value;
-  let hornsFilter = this.state.filteredBeasts.filter(beast => {
+  let hornsFilter = OriginalBeastsArray.filter(beast => {
     // eslint-disable-next-line
     return beast.horns == hornsNum
   })
